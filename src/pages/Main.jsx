@@ -156,6 +156,7 @@ export default function Main() {
     if (isLoggedIn) {
       // 로그아웃 처리 - 백엔드 API 호출
       try {
+          //로그아웃
         await axiosInstance.post('/api/auth/logout');
         // 성공적으로 로그아웃되면 로컬 스토리지에서 토큰 제거
         localStorage.removeItem('accessToken');
